@@ -1,5 +1,5 @@
 
-This repository contains resources and test flows for validating weather-related features in mobile applications (Android and iOS). It is organized to support automated testing and validation of weather activity suggestions, API responses, and UI flows.
+This repository contains resources and test flows for validating weather-related features in mobile applications (Android and iOS). It is organized to support automated testing and validation of weather activity suggestions and UI flows with Maestro automation
 
 ## Project Structure
 
