@@ -1,0 +1,16 @@
+# Reusable Component: App Launch
+# Handles launching the app and getting past initial screens
+
+appId: com.weather.app-staging
+
+---
+# Launch the app
+- launchApp:
+    clearState: false
+- waitForAnimationToEnd
+# Handle iOS tracking permission if it appears
+- runFlow:
+    when:
+      visible: ".*[Tt]rack.*"
+    commands:
+      - tapOn: "Allow"

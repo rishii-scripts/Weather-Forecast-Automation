@@ -1,0 +1,15 @@
+appId: com.weather.app
+
+---
+
+- runFlow:
+    file: ../components/app-launch-ios.yaml
+
+- runFlow:
+    file: ../components/activity/autocomplete-validation.yaml
+
+- runFlow:
+    file: ../components/activity/select-city-api-trigger.yaml
+
+- runFlow:
+    file: ../components/activity/verify-7day-results.yaml

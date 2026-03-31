@@ -1,0 +1,21 @@
+# Reusable Component: App Launch (Android)
+# Handles launching the app and getting past initial screens
+
+appId: com.weather.app-staging
+
+---
+# Launch the app
+- launchApp:
+    clearState: false
+- waitForAnimationToEnd
+# Handle Android-specific permissions if they appear
+- runFlow:
+    when:
+      visible: "Allow"
+    commands:
+      - tapOn: "Allow"
+- runFlow:
+    when:
+      visible: "While using the app"
+    commands:
+      - tapOn: "While using the app"

@@ -1,0 +1,12 @@
+# Scenario: API failure handling
+- runFlow:
+    commands:
+      - tapOn:
+          id: "search_input"
+      - inputText: "Mumbai"
+      - tapOn: "Mumbai"
+      - extendedWaitUntil:
+          visible: "Something went wrong"
+          timeout: 10000
+      - assertVisible: "Something went wrong"
+      - tapOn: "Retry"

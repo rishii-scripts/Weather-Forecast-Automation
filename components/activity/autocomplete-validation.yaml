@@ -1,0 +1,11 @@
+# Scenario: Autocomplete suggestions display dynamically
+- runFlow:
+    commands:
+      - tapOn:
+          id: "search_input"
+      - inputText: "Mum"
+      - extendedWaitUntil:
+          visible:
+            id: "suggestion_list"
+          timeout: 5000
+      - assertVisible: "Mumbai"

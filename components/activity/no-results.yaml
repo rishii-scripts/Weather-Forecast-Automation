@@ -1,0 +1,10 @@
+# Scenario: No autocomplete results
+- runFlow:
+    commands:
+      - tapOn:
+          id: "search_input"
+      - inputText: "Xyzabc"
+      - extendedWaitUntil:
+          visible: "No results found"
+          timeout: 5000
+      - assertVisible: "No results found"

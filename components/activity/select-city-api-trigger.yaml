@@ -1,0 +1,12 @@
+# Scenario: Selecting a suggestion triggers API
+- runFlow:
+    commands:
+      - tapOn: "Mumbai"
+      - extendedWaitUntil:
+          visible:
+            id: "loading_spinner"
+          timeout: 3000
+      - extendedWaitUntil:
+          notVisible:
+            id: "loading_spinner"
+          timeout: 10000

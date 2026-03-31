@@ -1,0 +1,53 @@
+# Scenario: Validate Day 1 → Day 7 using IDs
+- runFlow:
+    commands:
+      - extendedWaitUntil:
+          visible:
+            id: "activity_card"
+          timeout: 10000
+
+# Validate that all 7 days of activity results are displayed with correct IDs (verified the elements dynamically)
+# Validate with index because there are multiple elements with the same ID for each day, so we need to check the index to ensure we're validating the correct instance for each day. 
+# This approach allows us to confirm that all 7 days of results are present and correctly displayed in the UI.
+
+      # -------- DAY 1 --------
+      - assertVisible: { id: "date_text", index: 0 }
+      - assertVisible: { id: "activity_name", index: 0 }
+      - assertVisible: { id: "rank_text", index: 0 }
+      - assertVisible: { id: "reason_text", index: 0 }
+
+      # -------- DAY 2 --------
+      - assertVisible: { id: "date_text", index: 1 }
+      - assertVisible: { id: "activity_name", index: 1 }
+      - assertVisible: { id: "rank_text", index: 1 }
+      - assertVisible: { id: "reason_text", index: 1 }
+
+      # -------- DAY 3 --------
+      - assertVisible: { id: "date_text", index: 2 }
+      - assertVisible: { id: "activity_name", index: 2 }
+      - assertVisible: { id: "rank_text", index: 2 }
+      - assertVisible: { id: "reason_text", index: 2 }
+
+      # -------- DAY 4 --------
+      - assertVisible: { id: "date_text", index: 3 }
+      - assertVisible: { id: "activity_name", index: 3 }
+      - assertVisible: { id: "rank_text", index: 3 }
+      - assertVisible: { id: "reason_text", index: 3 }
+
+      # -------- DAY 5 --------
+      - assertVisible: { id: "date_text", index: 4 }
+      - assertVisible: { id: "activity_name", index: 4 }
+      - assertVisible: { id: "rank_text", index: 4 }
+      - assertVisible: { id: "reason_text", index: 4 }
+
+      # -------- DAY 6 --------
+      - assertVisible: { id: "date_text", index: 5 }
+      - assertVisible: { id: "activity_name", index: 5 }
+      - assertVisible: { id: "rank_text", index: 5 }
+      - assertVisible: { id: "reason_text", index: 5 }
+
+      # -------- DAY 7 --------
+      - assertVisible: { id: "date_text", index: 6 }
+      - assertVisible: { id: "activity_name", index: 6 }
+      - assertVisible: { id: "rank_text", index: 6 }
+      - assertVisible: { id: "reason_text", index: 6 }
